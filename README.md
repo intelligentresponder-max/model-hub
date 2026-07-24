@@ -68,6 +68,33 @@ und genau der, der vor Gericht kassiert wird. Nicht machen.
 
 ---
 
+## Kontaktwege
+
+Hauptweg sind zwei **WhatsApp-Direktlinks** (`wa.me`), einer je Angebot. Klick
+öffnet einen Einzelchat mit vorformuliertem Text:
+
+| Button | Vorformulierter Text |
+|---|---|
+| Vermittlung (orange) | „Hallo, ich interessiere mich für die Vermittlung." |
+| Portfolio-Service (gold) | „Hallo, ich interessiere mich für den Portfolio-Service." |
+
+So ist beim Eingang sofort erkennbar, aus welchem Zweig die Anfrage kommt.
+
+**Bewusst keine WhatsApp-Gruppe.** In einer Gruppe sehen alle Mitglieder die
+Telefonnummern aller anderen. Bei einer Zielgruppe aus teils jungen Menschen
+wäre ein öffentlich verlinkter Gruppen-Einladungslink ein Datenleck by design.
+Der Direktlink hat dieses Problem nicht.
+
+**Über WhatsApp laufen keine Bilder.** Die Zeile „Bilder bitte nicht über
+WhatsApp senden — dafür melden wir uns per E-Mail" steht aus einem Grund auf der
+Seite: Modeldaten fallen unter Art. 9 DSGVO, WhatsApp ist dafür nicht geeignet.
+Die Zeile dokumentiert außerdem, dass ungefragt zugesandte Fotos nicht
+erwünscht waren. Nicht entfernen.
+
+E-Mail steht als zweiter Weg darunter.
+
+---
+
 ## Datenschutz
 
 Modeldaten (Fotos, Maße, Sedcards) fallen unter **Art. 9 DSGVO** — besondere
@@ -116,6 +143,7 @@ grenzwertig. Umstieg auf eine geeignetere Lösung einplanen.
 ```
 model-hub/
 ├── index.html      Landingpage (single file, CSS inline)
+├── CLAUDE.md       Projektregeln für Claude Code
 ├── README.md       Diese Datei
 └── .gitignore
 ```
@@ -142,6 +170,7 @@ Alle Icons sind Inline-SVG, kein Emoji — rendert geräteunabhängig identisch.
 
 ## Offene Punkte vor dem Livegang
 
+- [x] WhatsApp-Direktlinks eingebaut (beide Zweige, vorformulierter Text)
 - [ ] E-Mail-Adresse eintragen (aktuell `PLATZHALTER@DOMAIN.DE` in `index.html`)
 - [ ] Impressum schreiben und verlinken
 - [ ] Datenschutzerklärung schreiben und verlinken
