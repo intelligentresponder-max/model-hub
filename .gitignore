@@ -1,1 +1,33 @@
+# Bilder und Uploads — niemals ins Repo
+uploads/
+bilder/
+models/
+*.raw
+*.psd
 
+# Lokale Notizen und Entwürfe
+CLAUDE.local.md
+*.local.md
+notizen/
+entwurf/
+
+# Verträge und personenbezogene Dokumente
+vertraege/
+einwilligungen/
+*.docx
+*.pdf
+
+# System
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs
+*.log
+npm-debug.log*
