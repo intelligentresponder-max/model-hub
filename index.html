@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Modelagentur &amp; Portfolio-Service · Frankfurt</title>
+<meta name="description" content="Vermittlung an Fotografen, Marken und Castings. Und Portfolio-Websites für Models. Zwei getrennte Angebote aus Frankfurt.">
+
+<style>
+  :root{
+    --navy:#0F1B2D;
+    --navy-2:#16263C;
+    --cream:#F7F4EE;
+    --orange:#E8792B;
+    --gold:#D4A24C;
+    --ink:#101820;
+    --muted:#6C7789;
+    --line:rgba(255,255,255,.10);
+    --line-d:rgba(16,24,32,.12);
+    --r:14px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  }
+
+  body{
+    font-family:"Inter","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 24px}
+
+  .eyebrow{
+    font-size:11px;font-weight:700;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--orange);
+  }
+  .eyebrow.gold{color:var(--gold)}
+
+  h1,h2,h3{line-height:1.15;letter-spacing:-.02em;font-weight:800}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:var(--navy);
+    color:#fff;
+    padding:72px 0 64px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before,.hero::after{
+    content:"";position:absolute;border-radius:50%;
+    filter:blur(90px);opacity:.30;pointer-events:none;
+  }
+  .hero::before{width:380px;height:380px;background:var(--orange);top:-160px;right:-90px}
+  .hero::after{width:320px;height:320px;background:var(--gold);bottom:-190px;left:-110px}
+
+  .hero .wrap{position:relative;z-index:1;text-align:center}
+
+  .pill{
+    display:inline-block;border:1px solid rgba(232,121,43,.55);
+    color:var(--orange);border-radius:999px;
+    padding:7px 18px;font-size:11px;font-weight:700;
+    letter-spacing:.18em;text-transform:uppercase;
+  }
+
+  .hero h1{
+    font-size:clamp(2.4rem,6.5vw,4rem);
+    margin:26px 0 0;color:#fff;
+  }
+  .hero h1 .accent{color:var(--orange);display:block}
+
+  .hero p.lead{
+    max-width:520px;margin:20px auto 0;
+    color:rgba(255,255,255,.72);font-size:1.02rem;
+  }
+
+  .hero-split{
+    display:flex;align-items:center;justify-content:center;
+    gap:14px;margin-top:36px;flex-wrap:wrap;
+  }
+  .hero-card{
+    background:rgba(255,255,255,.055);
+    border:1px solid var(--line);
+    border-radius:var(--r);
+    padding:18px 26px;min-width:190px;
+  }
+  .hero-card .t{font-weight:700;font-size:1rem;color:#fff}
+  .hero-card .s{font-size:.8rem;color:rgba(255,255,255,.55);margin-top:3px}
+  .plus{color:var(--orange);font-size:1.6rem;font-weight:800}
+
+  .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:13px 26px;border-radius:999px;
+    font-weight:700;font-size:.94rem;text-decoration:none;
+    border:1px solid transparent;transition:transform .16s ease,opacity .16s ease;
+  }
+  .btn svg{width:17px;height:17px;flex:none}
+  .btn:hover{transform:translateY(-2px)}
+  .btn:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+  .btn-primary{background:var(--orange);color:#fff}
+  .btn-ghost{border-color:rgba(255,255,255,.28);color:#fff}
+
+  /* ---------- SECTIONS ---------- */
+  .sec{padding:64px 0}
+  .sec-head{margin-bottom:30px;max-width:620px}
+  .sec-head h2{font-size:clamp(1.6rem,3.6vw,2.2rem);margin-top:8px}
+  .sec-head p{color:var(--muted);margin-top:10px}
+
+  /* ---------- TWO OFFERS ---------- */
+  .offers{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media(max-width:760px){.offers{grid-template-columns:1fr}}
+
+  .offer{
+    border-radius:var(--r);padding:30px 26px;
+    border:1px solid var(--line-d);background:#fff;
+    display:flex;flex-direction:column;
+  }
+  .offer.dark{background:var(--navy);border-color:transparent;color:#fff}
+  .offer.dark .offer-desc{color:rgba(255,255,255,.68)}
+  .offer.dark li{color:rgba(255,255,255,.82)}
+
+  .offer-icon{
+    width:46px;height:46px;border-radius:12px;
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:18px;
+  }
+  .offer-icon svg{width:23px;height:23px}
+  .ic-orange{background:rgba(232,121,43,.14)}
+  .ic-orange svg{stroke:var(--orange)}
+  .ic-gold{background:rgba(212,162,76,.16)}
+  .ic-gold svg{stroke:var(--gold)}
+
+  .offer h3{font-size:1.28rem;margin-bottom:8px}
+  .offer.dark h3{color:#fff}
+  .offer-desc{color:var(--muted);font-size:.95rem}
+
+  .offer ul{list-style:none;margin:18px 0 0}
+  .offer li{
+    font-size:.92rem;padding-left:24px;position:relative;
+    margin-bottom:9px;color:#33414f;
+  }
+  .offer li::before{
+    content:"";position:absolute;left:0;top:8px;
+    width:7px;height:7px;border-radius:50%;background:var(--orange);
+  }
+  .offer.dark li::before{background:var(--gold)}
+
+  .offer-foot{
+    margin-top:auto;padding-top:20px;
+    font-size:.85rem;color:var(--muted);
+  }
+  .offer.dark .offer-foot{color:rgba(255,255,255,.5)}
+
+  /* ---------- GALLERY ---------- */
+  .gal-strip{background:var(--navy-2);padding:56px 0}
+  .gal-strip .sec-head h2{color:#fff}
+  .gal-strip .sec-head p{color:rgba(255,255,255,.6)}
+
+  .gal{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;margin-top:28px;
+  }
+  @media(max-width:860px){.gal{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:560px){.gal{grid-template-columns:repeat(2,1fr)}}
+
+  .ph{
+    aspect-ratio:3/4;border-radius:10px;
+    background:rgba(255,255,255,.05);
+    border:1px dashed rgba(255,255,255,.18);
+    display:flex;align-items:center;justify-content:center;
+    color:rgba(255,255,255,.28);
+  }
+  .ph svg{width:26px;height:26px;stroke:currentColor}
+  .ph.tall{grid-row:span 2;aspect-ratio:3/8}
+  @media(max-width:560px){.ph.tall{grid-row:span 1;aspect-ratio:3/4}}
+
+  /* ---------- STEPS ---------- */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+  @media(max-width:760px){.steps{grid-template-columns:1fr}}
+
+  .step{
+    background:#fff;border:1px solid var(--line-d);
+    border-radius:var(--r);padding:24px 22px;
+  }
+  .step-n{
+    font-size:.7rem;font-weight:800;letter-spacing:.14em;
+    color:var(--orange);margin-bottom:12px;
+  }
+  .step h4{font-size:1.02rem;margin-bottom:7px;font-weight:700}
+  .step p{font-size:.9rem;color:var(--muted)}
+
+  /* ---------- PRIVACY ---------- */
+  .privacy{background:var(--navy);color:#fff;padding:60px 0}
+  .privacy .sec-head h2{color:#fff}
+  .privacy .sec-head p{color:rgba(255,255,255,.65)}
+
+  .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+  @media(max-width:760px){.pgrid{grid-template-columns:1fr}}
+
+  .pcard{
+    background:rgba(255,255,255,.05);
+    border:1px solid var(--line);
+    border-radius:var(--r);padding:24px 22px;
+  }
+  .pcard svg{width:22px;height:22px;stroke:var(--gold);margin-bottom:14px}
+  .pcard h4{font-size:1rem;margin-bottom:8px;color:#fff;font-weight:700}
+  .pcard p{font-size:.88rem;color:rgba(255,255,255,.66)}
+
+  .note{
+    margin-top:26px;padding:18px 20px;
+    border-left:3px solid var(--gold);
+    background:rgba(212,162,76,.09);
+    border-radius:0 10px 10px 0;
+    font-size:.88rem;color:rgba(255,255,255,.78);
+  }
+  .note strong{color:#fff}
+
+  /* ---------- CONTACT ---------- */
+  .contact{padding:70px 0;text-align:center}
+  .contact h2{font-size:clamp(1.7rem,4vw,2.4rem)}
+  .contact p{color:var(--muted);margin:12px auto 0;max-width:440px}
+
+  .lang{
+    display:flex;gap:8px;justify-content:center;
+    flex-wrap:wrap;margin-top:34px;
+  }
+  .lang span{
+    font-size:.72rem;font-weight:700;letter-spacing:.1em;
+    color:var(--muted);border:1px solid var(--line-d);
+    padding:6px 13px;border-radius:999px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--navy);color:rgba(255,255,255,.5);padding:34px 0;font-size:.85rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  footer a{color:rgba(255,255,255,.72);text-decoration:none;margin-left:18px}
+  footer a:hover{color:var(--orange)}
+  footer a:first-child{margin-left:0}
+
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+  .reveal.vis{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <span class="pill">Frankfurt · Germany</span>
+
+    <h1>Models &amp; Marken<span class="accent">zusammenbringen.</span></h1>
+
+    <p class="lead">
+      Zwei Angebote, klar getrennt: Wir vermitteln Models an Auftraggeber.
+      Und wir bauen Models ein Portfolio, das online steht.
+    </p>
+
+    <div class="hero-split">
+      <div class="hero-card">
+        <div class="t">Vermittlung</div>
+        <div class="s">Fotografen · Marken · Castings</div>
+      </div>
+      <span class="plus">+</span>
+      <div class="hero-card">
+        <div class="t">Portfolio</div>
+        <div class="s">Website &amp; Sedcard</div>
+      </div>
+    </div>
+
+    <div class="cta-row">
+      <a href="#kontakt" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m4 7 8 5 8-5"/></svg>
+        Kontakt aufnehmen
+      </a>
+      <a href="#angebote" class="btn btn-ghost">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+        Angebote ansehen
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- OFFERS -->
+<section class="sec" id="angebote">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Zwei Wege</span>
+      <h2>Was wir machen</h2>
+      <p>Beides ist getrennt buchbar. Das eine ist keine Bedingung für das andere.</p>
+    </div>
+
+    <div class="offers">
+      <article class="offer reveal">
+        <div class="offer-icon ic-orange">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Vermittlung</h3>
+        <p class="offer-desc">Wir bringen dich mit Auftraggebern zusammen.</p>
+        <ul>
+          <li>Fotografen, Marken, Castings</li>
+          <li>Provision nur bei Erfolg</li>
+          <li>Kein Exklusivvertrag</li>
+          <li>Schriftlicher Vertrag, feste Sätze</li>
+        </ul>
+        <p class="offer-foot">Für Models kostenlos, bis ein Auftrag zustande kommt.</p>
+      </article>
+
+      <article class="offer dark reveal">
+        <div class="offer-icon ic-gold">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+        </div>
+        <h3>Portfolio-Service</h3>
+        <p class="offer-desc">Deine eigene Seite. Gehört dir, nicht uns.</p>
+        <ul>
+          <li>Portfolio-Website mit eigener Adresse</li>
+          <li>Digitale Sedcard als PDF</li>
+          <li>Du behältst alle Bildrechte</li>
+          <li>Festpreis, keine Provision</li>
+        </ul>
+        <p class="offer-foot">Getrennt abgerechnet. Ohne Verbindung zur Vermittlung.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gal-strip">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow gold">Arbeiten</span>
+      <h2>Gesichter</h2>
+      <p>Nur mit Freigabe veröffentlicht. Jederzeit widerrufbar.</p>
+    </div>
+
+    <div class="gal">
+      <div class="ph tall"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg></div>
+      <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg></div>
+      <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg></div>
+      <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg></div>
+      <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg></div>
+      <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg></div>
+      <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Ablauf</span>
+      <h2>So läuft es</h2>
+    </div>
+
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-n">SCHRITT 01</div>
+        <h4>Melden</h4>
+        <p>Kurze Nachricht, wer du bist und was du suchst. Mehr nicht.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-n">SCHRITT 02</div>
+        <h4>Gespräch</h4>
+        <p>Wir klären, welches der beiden Angebote passt — oder ob keines passt.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-n">SCHRITT 03</div>
+        <h4>Vertrag</h4>
+        <p>Schriftlich, mit festen Sätzen. Du liest in Ruhe, bevor du unterschreibst.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRIVACY -->
+<section class="privacy" id="datenschutz">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow gold">Datenschutz</span>
+      <h2>Deine Bilder bleiben deine</h2>
+      <p>Das Wichtigste vorab, in klaren Worten.</p>
+    </div>
+
+    <div class="pgrid">
+      <div class="pcard reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <h4>Upload freiwillig</h4>
+        <p>Du musst nichts hochladen. Ohne Bilder geht es auch — wir melden uns trotzdem.</p>
+      </div>
+
+      <div class="pcard reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 3a9 9 0 1 0 9 9"/><path d="M16 3h5v5"/></svg>
+        <h4>Rechte bleiben bei dir</h4>
+        <p>Wir erwerben keine Nutzungsrechte. Für eine Sedcard fragen wir dich separat.</p>
+      </div>
+
+      <div class="pcard reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+        <h4>Jederzeit löschbar</h4>
+        <p>Eine Nachricht genügt. Wir löschen alles und bestätigen dir das schriftlich.</p>
+      </div>
+    </div>
+
+    <div class="note reveal">
+      <strong>Was das konkret heißt:</strong> Deine Einwilligung holen wir getrennt ein —
+      einmal für die Speicherung, einmal für eine mögliche Sedcard. Beides kannst du
+      unabhängig widerrufen, ohne dass die Vermittlung davon berührt wird.
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec contact" id="kontakt">
+  <div class="wrap">
+    <span class="eyebrow">Kontakt</span>
+    <h2>Interesse?</h2>
+    <p>Schreib uns. Eine Zeile reicht.</p>
+
+    <div class="cta-row">
+      <a href="mailto:PLATZHALTER@DOMAIN.DE" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m4 7 8 5 8-5"/></svg>
+        E-Mail schreiben
+      </a>
+    </div>
+
+    <div class="lang">
+      <span>DE</span><span>EN</span><span>PL</span><span>TR</span><span>FR</span><span>ES</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 · Frankfurt am Main</div>
+    <div>
+      <a href="#datenschutz">Datenschutz</a>
+      <a href="#">Impressum</a>
+      <a href="#">AGB</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add("vis"); });
+  }, { threshold:.12 });
+  document.querySelectorAll(".reveal").forEach(function(el){ obs.observe(el); });
+</script>
+
+</body>
+</html>
