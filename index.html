@@ -226,10 +226,50 @@
   }
   .note strong{color:#fff}
 
+  .hero-hint{
+    margin-top:16px;font-size:.83rem;
+    color:rgba(255,255,255,.45);
+  }
+
   /* ---------- CONTACT ---------- */
   .contact{padding:70px 0;text-align:center}
   .contact h2{font-size:clamp(1.7rem,4vw,2.4rem)}
   .contact p{color:var(--muted);margin:12px auto 0;max-width:440px}
+
+  .wa-row{
+    display:flex;gap:14px;justify-content:center;
+    flex-wrap:wrap;margin-top:32px;
+  }
+
+  .wa{
+    display:flex;align-items:center;gap:14px;
+    text-decoration:none;text-align:left;
+    padding:16px 24px;border-radius:var(--r);
+    min-width:270px;
+    border:1px solid var(--line-d);background:#fff;
+    transition:transform .16s ease,box-shadow .16s ease;
+  }
+  .wa:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(16,24,32,.10)}
+  .wa:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+
+  .wa-mark{width:26px;height:26px;flex:none}
+  .wa-orange .wa-mark{color:var(--orange)}
+  .wa-gold .wa-mark{color:var(--gold)}
+
+  .wa-txt{display:flex;flex-direction:column}
+  .wa-t{font-weight:700;font-size:.98rem;color:var(--ink)}
+  .wa-s{font-size:.8rem;color:var(--muted);margin-top:2px}
+
+  .contact p.wa-note{
+    margin:20px auto 0;font-size:.83rem;
+    color:var(--muted);max-width:420px;
+  }
+
+  .contact p.mail-line{
+    margin:14px auto 0;font-size:.88rem;color:var(--muted);
+  }
+  .mail-line a{color:var(--orange);text-decoration:none;font-weight:600}
+  .mail-line a:hover{text-decoration:underline}
 
   .lang{
     display:flex;gap:8px;justify-content:center;
@@ -288,6 +328,8 @@
         Angebote ansehen
       </a>
     </div>
+
+    <p class="hero-hint">Eine Nachricht genügt. Keine Anmeldung, kein Upload.</p>
   </div>
 </header>
 
@@ -427,12 +469,36 @@
     <h2>Interesse?</h2>
     <p>Schreib uns. Eine Zeile reicht.</p>
 
-    <div class="cta-row">
-      <a href="mailto:PLATZHALTER@DOMAIN.DE" class="btn btn-primary">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m4 7 8 5 8-5"/></svg>
-        E-Mail schreiben
+    <div class="wa-row">
+      <a class="wa wa-orange"
+         href="https://wa.me/4915256044541?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20die%20Vermittlung."
+         target="_blank" rel="noopener noreferrer">
+        <svg class="wa-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3a8.2 8.2 0 1 1 7.2 3.9z"/></svg>
+        <span class="wa-txt">
+          <span class="wa-t">Vermittlung</span>
+          <span class="wa-s">Fotografen · Marken · Castings</span>
+        </span>
+      </a>
+
+      <a class="wa wa-gold"
+         href="https://wa.me/4915256044541?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20den%20Portfolio-Service."
+         target="_blank" rel="noopener noreferrer">
+        <svg class="wa-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3a8.2 8.2 0 1 1 7.2 3.9z"/></svg>
+        <span class="wa-txt">
+          <span class="wa-t">Portfolio-Service</span>
+          <span class="wa-s">Website &amp; Sedcard</span>
+        </span>
       </a>
     </div>
+
+    <p class="wa-note">
+      Bilder bitte nicht über WhatsApp senden — dafür melden wir uns per E-Mail.
+    </p>
+
+    <p class="mail-line">
+      Lieber schreiben?
+      <a href="mailto:PLATZHALTER@DOMAIN.DE">PLATZHALTER@DOMAIN.DE</a>
+    </p>
 
     <div class="lang">
       <span>DE</span><span>EN</span><span>PL</span><span>TR</span><span>FR</span><span>ES</span>
